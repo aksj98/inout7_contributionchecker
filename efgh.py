@@ -45,8 +45,7 @@ st.markdown("## Devfolio Funding:" + str(dev_dict['https://devfolio.co/submissio
 cad=st.slider("Number you think the next donation will be",1,50000)
 abra=dev_dict['https://devfolio.co/submissions/'+project]
 st.markdown("Total donation is likely to be(If current devfolio matching isn't 0:"+str(((((((abra+public_funds)**0.5)+(cad**0.5)))**2)-public_funds-cad)))
-            
-
+st.markdown("Application data updates every 30 minutes")
 
 
 
