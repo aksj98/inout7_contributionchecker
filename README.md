@@ -10,3 +10,7 @@ you can check contributions for inout using this
 * Install required libraries
 * Ensure that chromedriver is added to PATH variable.
 * python abcd.py
+# Functionalities
+* Check the total public funding across projects
+* Check the total devfolio contribution
+* Project your funding and see what the next funding will bring in for you.
