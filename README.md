@@ -13,4 +13,4 @@ you can check contributions for inout using this
 # Functionalities
 * Check the total public funding across projects
 * Check the total devfolio contribution
-* Project your funding and see what the next funding will bring in for you.
+* Project your funding and see what the next funding will bring in for you, based on the quadratic funding formulae
