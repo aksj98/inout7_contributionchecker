@@ -31,17 +31,20 @@ def f(links):
         #no2=int((dev_fund[0].text).replace(',',''))
         devfolio_funds=devfolio_funds+no2
     return pub_dict,dev_dict,devfolio_funds,public_funds
-pub_dict,dev_dict,devfolio_funds,public_funds=f(links)  
-project=st.sidebar.selectbox("Project",links)
+pub_dict,dev_dict,devfolio_funds,public_funds=f(links)
+links1=[]
+for i in links:
+    links1.append(i.replace('https://devfolio.co/submissions/',''))
+project=st.sidebar.selectbox("Project",links1)
 st.markdown("# Overall")
 st.markdown("## Public Funding:"+str(public_funds))
 st.markdown("## Devfolio Funding:"+str(devfolio_funds))
-st.markdown("# Project:"+project.replace('https://devfolio.co/submissions/',''))
-st.markdown("## Public Funding:"+str(pub_dict[project]))
-st.markdown("## Devfolio Funding:" + str(dev_dict[project]))
+st.markdown("# Project:"+project)
+st.markdown("## Public Funding:"+str(pub_dict['https://devfolio.co/submissions/'+project]))
+st.markdown("## Devfolio Funding:" + str(dev_dict['https://devfolio.co/submissions/'+project]))
 cad=st.slider("Number you think the next donation will be",1,50000)
-abra=dev_dict[project]
-st.markdown("Total donation is likely to be:"+str(((((((abra+public_funds)**0.5)+(cad**0.5)))**2)-public_funds-cad)))
+abra=dev_dict['https://devfolio.co/submissions/'+project]
+st.markdown("Total donation is likely to be(If current devfolio matching isn't 0:"+str(((((((abra+public_funds)**0.5)+(cad**0.5)))**2)-public_funds-cad)))
             
 
 
