@@ -7,7 +7,7 @@ public_funds=0
 devfolio_funds=0
 pub_dict={}
 dev_dict={}
-@st.cache(ttl=1800)
+@st.cache
 def f(links):
     public_funds=0
     devfolio_funds=0
